@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DB</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../asset/fontawesome-free/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../asset/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../asset/fontawesome-free/css/all.css">   
+</head>
+<body >
+     <!-- modal delete -->
+     <div class="modal">
+        <div class="modal-dialog">
+            <div class="modal-head">
+                <p><i class="fa fa-question-circle"></i>  Warning</p>
+            </div>
+            <div class="modal-body">
+                <h3>Are you sure you want to delete <i class="fa fa-exclamation-triangle"></i></h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="cancle()">Cancel</button>
+                <button type="submit" class="delete">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <!-- start my side bar here -->
+        <div class="side-bar" id="side-bar">
+            <div class="navbar">
+                <div class="side-head">
+                    <h4>GDSSS GANDU</h4>
+                </div>
+                <div class="side-body">
+                    <div class="file">
+                        <img src="../asset/img/avatar.png" alt="">
+                        <h4>Mrcode</h4>
+                    </div>
+                    <div class="searchBtn">
+                        <input type="text" placeholder="Search....">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="side-footer">
+                    <ul class="navbar">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fa fa-home d-hide"></i>
+                                <span class="d-hide">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="studentRecord.html" class="nav-link">
+                                <i class="fa fa-user-graduate d-hide"></i>
+                                <span class="d-hide">Student Record</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-registered"></i>
+                                <span class="d-hide">Add new student</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-money-bill d-hide"></i>
+                                <span class="d-hide">Payment Record</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="manage_student_record.html" class="nav-link">
+                                <i class="fa fa-envelope-open-text d-hide"></i>
+                                <span class="d-hide">Manage Student</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-users d-hide"></i>
+                                <span class="d-hide">Teachers Record</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="graduation_list.html" class="nav-link">
+                                <i class="fa fa-user-cog d-hide"></i>
+                                <span class="d-hide">Graduation List</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-user-tag d-hide"></i>
+                                <span class="d-hide">Report</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end my side bar here -->
+        
+        <!-- start header here -->
+        <div class="header">
+           <div class="right">
+                <div class="menu-icon">
+                    <i class="fa fa-bars" id="openBar"></i>
+                </div>
+                <div class="left-head">
+                    <div class="seat-btn">
+                        <input type="text" placeholder="Search">
+                        <i class="fa fa-search" id="open"></i>
+                    </div>
+                    <div class="profile-name">
+                        <img src="../asset/img/avatar.png" alt="">
+                    </div>
+                </div>
+           </div>
+        </div>
+        <!-- end header here -->
+
+        <!-- start Dashboard tabs -->
+        <div class="tabs" id="tabls">
+            <div class="str">
+                <div class="str-home">
+                    <i class="fa fa-home"></i>
+                    <div class="db">
+                        <h4>Dashboard / &nbsp;</h4>
+                        <p>Graduation List</p>
+                    </div>
+                </div>
+                <div class="table-st">
+                    <div class="table-st-head">
+                        <h4>Graduation List</h4>
+                        <input type="text" placeholder="Search" onkeyup="search()" id="searchBar">
+                    </div>
+                    <table class="student-data">
+                        <tr class="border">
+                            <th>#</th>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Gender</th>
+                            <th>Department</th>
+                            <th>Class</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 5H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 5H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 5H</td>
+                            <td>Deactive</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 5H</td>
+                            <td>Deactive</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 5H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 5H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Muh'd Usman</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 4H</td>
+                            <td>Deactive</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 3H</td>
+                            <td>False</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                             </td>
+                        </tr>
+
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 4H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 5H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Muh'd Usman</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 4H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 3H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 5H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="searchtab">
+                            <td>1</td>
+                            <td>Abubakar</td>
+                            <td>Sani</td>
+                            <td>Male</td>
+                            <td>Art</td>
+                            <td>SS 5H</td>
+                            <td>Active</td>
+                            <td>
+                                <a href=""><i class="fa fa-edit edit"></i></a>
+                                <a href=""><i class="fa fa-user view"></i></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script type="text/javaScript" src="load.js"></script> -->
+    <script type="text/javaScript" src="home.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>
