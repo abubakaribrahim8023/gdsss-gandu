@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DB</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../asset/fontawesome-free/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../asset/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../asset/fontawesome-free/css/all.css">   
+</head>
+<body >
+     <!-- modal delete -->
+     <div class="modal">
+        <div class="modal-dialog">
+            <div class="modal-head">
+                <p><i class="fa fa-question-circle"></i>  Warning</p>
+            </div>
+            <div class="modal-body">
+                <h3>Are you sure you want to delete <i class="fa fa-exclamation-triangle"></i></h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="cancle()">Cancel</button>
+                <button type="submit" class="delete">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <!-- start my side bar here -->
+        <div class="side-bar" id="side-bar">
+            <div class="navbar">
+                <div class="side-head">
+                    <h4>GDSSS GANDU</h4>
+                </div>
+                <div class="side-body">
+                    <div class="file">
+                        <img src="../asset/img/avatar.png" alt="">
+                        <h4>Mrcode</h4>
+                    </div>
+                    <div class="searchBtn">
+                        <input type="text" placeholder="Search....">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="side-footer">
+                    <ul class="navbar">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fa fa-home d-hide"></i>
+                                <span class="d-hide">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="studentRecord.html" class="nav-link">
+                                <i class="fa fa-user-graduate d-hide"></i>
+                                <span class="d-hide">Student Record</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-registered"></i>
+                                <span class="d-hide">Add new student</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-money-bill d-hide"></i>
+                                <span class="d-hide">Payment Record</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="manage_student_record.html" class="nav-link">
+                                <i class="fa fa-envelope-open-text d-hide"></i>
+                                <span class="d-hide">Manage Student</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-users d-hide"></i>
+                                <span class="d-hide">Teachers Record</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="graduation_list.html" class="nav-link">
+                                <i class="fa fa-user-cog d-hide"></i>
+                                <span class="d-hide">Graduation List</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-user-tag d-hide"></i>
+                                <span class="d-hide">Report</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end my side bar here -->
+        
+        <!-- start header here -->
+        <div class="header">
+           <div class="right">
+                <div class="menu-icon">
+                    <i class="fa fa-bars" id="openBar"></i>
+                </div>
+                <div class="left-head">
+                    <div class="seat-btn">
+                        <input type="text" placeholder="Search">
+                        <i class="fa fa-search" id="open"></i>
+                    </div>
+                    <div class="profile-name">
+                        <img src="../asset/img/avatar.png" alt="">
+                    </div>
+                </div>
+           </div>
+        </div>
+        <!-- end header here -->
+
+        <!-- start Dashboard tabs -->
+        <div class="tabs" id="tabls">
+            <div class="str">
+                <div class="str-home">
+                    <i class="fa fa-home"></i>
+                    <div class="db">
+                        <h4>Dashboard / &nbsp;</h4>
+                        <p>Add new student</p>
+                    </div>
+                </div>
+                
+                <div class="add-new">
+                    <form action="">
+                        <div class="add-form">
+                            <div class="add-head">
+                                <div class="logo">
+                                    <i class="fa fa-graduation-cap"></i>
+                                    <h5>GDSS GANDU</h5>
+                                </div>
+                                <div class="discribe">
+                                    <h4>Add New Student</h4>
+                                </div>
+                            </div>
+                            <div class="add-body">
+                                <div class="add-col-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add-col-2">
+                                    <div class="add-page">
+                                        <div class="cir"></div>
+                                        <div class="cir"></div>
+                                        <div class="cir"></div>
+                                    </div>
+                                </div>
+                                <div class="add-col-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>First name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-footer">
+                                <button type="button">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script type="text/javaScript" src="load.js"></script> -->
+    <script type="text/javaScript" src="home.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>

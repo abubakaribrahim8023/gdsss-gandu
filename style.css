@@ -137,6 +137,7 @@
     font-weight: 600;
     font-family: sans-serif;
     color: #666;
+    position: relative;
     
 }
 .form-group input::placeholder{
@@ -273,3 +274,43 @@
 }
 
 /* mobile view */
+
+
+
+.form-group .red{
+    position: absolute;
+    right: 15px;
+    top: 66%;
+    color: rgb(253, 51, 51);
+    display: none;
+    
+}
+
+.form-group .green{
+    position: absolute;
+    right: 15px;
+    top: 66%;
+    display: none;
+    color: rgb(19, 190, 19);
+}
+
+
+
+
+
+.form-group #red{
+    position: absolute;
+    right: 15px;
+    top: 66%;
+    color: rgb(253, 51, 51);
+    display: none;
+    
+}
+
+.form-group #green{
+    position: absolute;
+    right: 15px;
+    top: 66%;
+    display: none;
+    color: rgb(19, 190, 19);
+}

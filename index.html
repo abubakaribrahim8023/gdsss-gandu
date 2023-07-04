@@ -24,11 +24,15 @@
                     <div class="login-body">
                         <div class="form-group">
                             <label>User name</label>
-                            <input type="text" placeholder="">
+                            <input type="text" placeholder="" id="validation">
+                            <i class="fa fa-power-off red"></i>
+                            <i class="fa fa-check green" ></i>
                         </div>
                         <div class="form-group">
                             <label>Email address</label>
-                            <input type="text" placeholder="">
+                            <input type="text" placeholder="" id="email">
+                            <i class="fa fa-power-off red" id="red"></i>
+                            <i class="fa fa-check green" id="green"></i>
                         </div>
                         <div class="form-group">
                             <label>Create password</label>
@@ -120,5 +124,6 @@
         </div>
     </div>
     <script src="main.js"></script>
+    <script src="validate_form.js"></script>
 </body>
 </html>
