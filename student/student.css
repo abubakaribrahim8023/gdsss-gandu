@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: aliceblue;
+    background: repeating-conic-gradient(
+        from 0deg,
+        rgba(236, 236, 236, 0.5) 63deg 89deg,
+        rgba(255, 255, 255, 0.8) 243deg 200deg,
+        rgba(236, 236, 236, 0.9) 0deg 120deg,
+        rgba(236, 236, 236, 0.9) 20deg 120deg
+    );
+    background-size: cover;
+}
+
+:root{
+    --public-colors: rgb(124, 24, 24);
+    --public-color: #960117;
+    --text-white: #fff;
+}
+
+
+/* header  */
+
+.header{
+    width: 100%;
+    padding: 25px 0;
+    background: var(--public-color);
+    position: fixed;
+    z-index: 2;
+}
+
+.header .st-head{
+    width: 65%;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.name-or-logo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.name-or-logo .logo-white{
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.name-or-logo .logo-border{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: dashed 4px black;
+    margin-top: 0.4px;
+    animation: circles 2s infinite linear;
+
+
+}
+@keyframes circles{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.name-or-logo h4{
+    color: #fff;
+    margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar li{
+    display: flex;
+    list-style: none;
+    margin: 0 30px 0 0;
+    align-items: center;
+}
+
+.navbar li a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 15px;
+    font-feature-settings: "c2pc";
+    font-weight: 600;
+}
+.navbar li a:hover{
+    color: #ddd;
+}
+
+.navbar li #login{
+    border: solid 1px #ddd;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+/* home page for student  */
+
+#home{
+    width: 100%;
+    height: 60vh;
+    background: var(--public-color);
+    padding-top: 160px;
+}
+.home{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+.left{
+    flex-basis: 48%;
+    text-align: center;
+    display: block;
+    margin-top: 80px;
+}
+
+.left h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+.left p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.left i{
+    font-size: 200px;
+    margin-top: -50px;
+}
+
+
+/* staff section  */
+.staff{
+    width: 100%;
+    margin-top: 60px;
+}
+.container{
+    width: 70%;
+    margin: auto;
+    margin-top: 60px;
+}
+.stf-head{
+    text-align: center;
+    justify-content: center;
+    display: block;
+}
+.stf-head .staff-title{
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: var(--public-color);
+}
+.stf-head .staff-title .h5{
+    color: black;
+}
+.staff-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.staff-line .line{
+    width: 45px;
+    height: 1px;
+    background: var(--public-color);
+}
+.staff-line .line1{
+    width: 45px;
+    height: 5px;
+    background: var(--public-color);
+    border-radius: 3px;
+}
+
+
+.stf-body{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.stf-body .st-col-4{
+    flex-basis: 23%;
+    text-align: center;
+    box-shadow: 2px 2px 10px 1px #ddd;
+    border: solid 1px #efefef;
+    min-height: 230px;
+}
+.staff-img{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+.staff-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.staff-img .text{
+    display: block;
+}
+.staff-img .text h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.staff-img .text p{
+    font-family: purisa;
+    font-weight: 600;
+}
+.staff-img .icons{
+    margin: auto;
+    margin-top: 20px;
+    width: 52%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    
+}
+.staff-img .icons i{
+    font-size: 18px;
+    color: #fff;
+    background: rgb(25, 110, 223);
+    padding: 3px;
+    border-radius: 1px;
+    font-family: purisa;
+    border-radius: 50%;
+}
+#wt{
+    background: rgb(7, 133, 55);
+}
+#tl{
+    background: rgb(19, 178, 206);
+}
+#tt{
+    background: rgb(19, 129, 192);
+}
