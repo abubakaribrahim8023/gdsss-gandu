@@ -22,6 +22,9 @@
     --public-colors: rgb(124, 24, 24);
     --public-color: #960117;
     --text-white: #fff;
+    --sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
 }
 
 
@@ -327,37 +330,115 @@
     font-size: 14px;
 }
 
+#footer{
+    width: 100%;
+    margin-top: 110px;
+    background: var(--public-color);
+    min-height: 360px;
+}
+
+.footer{
+    width: 66%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.col-3{
+    flex-basis: 24%;
+}
+.about-us{
+    display: block;
+}
+.about-us .about-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.about-us .about-header h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+}
+
+.about-us .about-header i{
+    /* color: var(); */
+    font-size: 25px;
+}
+.about-us .about-body{
+    display: block;
+}
+
+.about-us .about-body span{
+    padding: 10px 0;
+    font-family: var(--sans-serif);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: white;
+}
+.about-us .about-body li{
+    list-style: none;
+    margin: 30px 0;
+}
+.about-us .about-body li a{
+    text-decoration: none;
+    font-family: var(--sans-serif);
+    color: #ccc;
+    transition: 0.7s;
+}
+.about-us .about-body li a:hover{
+    border-bottom: solid 1px #fff;
+}
+
+.contect-l{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.contect-l i{
+    font-size: 20px;
+    margin-right: 10px;
+    padding: 5px 7px;
+    color: #960117;
+    background: white;
+    border-radius: 50%;
+}
+.contect-l .text span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #efefef;
+    font-size: 13px;
+}
+
+.form-head h5{
+    font-family: var(--sans-serif);
+    margin-bottom: 20px;
+
+}
+.form-body input{
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 6px 8px;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+.form-body .reds{
+    background: var(--public-color);
+    color: white;
+    font-weight: 600;
+}
+.end{
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 0;
+    background: #efefef;
+}
+.end footer{
+    font-family: var(--sans-serif);
+    color: var(--public-color);
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-img:nth-of-type(1)
-filter grayscale(1) brightness(40%)
-
-img:nth-of-type(2)
-clip-path var(--clip-start)
-transition clip-path 0.5s
-
-&:hover img:nth-of-type(2)
-clip-path var(--clip-end) */
