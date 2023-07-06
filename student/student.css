@@ -97,7 +97,7 @@
 }
 
 .navbar li{
-    display: flex;
+    /* display: flex; */
     list-style: none;
     margin: 0 30px 0 0;
     align-items: center;
@@ -120,6 +120,44 @@
     padding: 10px 30px;
     border-radius: 20px;
 }
+
+.dropdown{
+    background: var(--public-color);
+    position: fixed;
+    top: 70px;
+    padding: 12px 13px 12px 10px;
+    animation: fadeIn 0.6s both;
+    display: none;
+}
+.dropdown .nav-link{
+    margin: 15px 0;
+}
+.dropdown .nav-link a:hover{
+    background: white;
+    padding: 8px 20px 8px 10px;
+    color: #111;
+    border-radius: 5px;
+}
+.dropdown .nav-link i{
+    margin-right: 10px;
+}
+.dropdown .nav-link a{
+    font-weight: 300;
+    padding: 8px 20px 8px 10px;
+    transition: 0.3s;
+
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translatey(40px);
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+
 
 /* home page for student  */
 
@@ -236,6 +274,7 @@
 }
 .staff-img .text{
     display: block;
+    margin-top: 10px;
 }
 .staff-img .text h4{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -247,7 +286,7 @@
 }
 .staff-img .icons{
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 52%;
     display: flex;
     justify-content: space-between;
@@ -333,8 +372,9 @@
 #footer{
     width: 100%;
     margin-top: 110px;
-    background: var(--public-color);
+    background: #efefef;
     min-height: 360px;
+    color: black;
 }
 
 .footer{
@@ -360,11 +400,13 @@
 .about-us .about-header h4{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
+    color: #111;
 }
 
 .about-us .about-header i{
     /* color: var(); */
     font-size: 25px;
+    color: #111;
 }
 .about-us .about-body{
     display: block;
@@ -373,10 +415,8 @@
 .about-us .about-body span{
     padding: 10px 0;
     font-family: var(--sans-serif);
-    font-weight: 400;
     font-size: 14px;
-    letter-spacing: 2px;
-    color: white;
+    color: #111;
 }
 .about-us .about-body li{
     list-style: none;
@@ -385,7 +425,7 @@
 .about-us .about-body li a{
     text-decoration: none;
     font-family: var(--sans-serif);
-    color: #ccc;
+    color: #111;
     transition: 0.7s;
 }
 .about-us .about-body li a:hover{
@@ -394,26 +434,27 @@
 
 .contect-l{
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
+    align-items: center;
+    margin-bottom: 15px;
 }
 .contect-l i{
-    font-size: 20px;
+    font-size: 14px;
     margin-right: 10px;
-    padding: 5px 7px;
-    color: #960117;
-    background: white;
+    padding: 6px;
+    color: white;
+    background: var(--public-color);
     border-radius: 50%;
 }
 .contect-l .text span{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #efefef;
-    font-size: 13px;
+    color: #111;
+    font-size: 12px;
 }
 
 .form-head h5{
     font-family: var(--sans-serif);
     margin-bottom: 20px;
+    color: #111;
 
 }
 .form-body input{
@@ -433,11 +474,11 @@
     text-align: center;
     margin-top: 20px;
     padding: 15px 0;
-    background: #efefef;
+    background: var(--public-color);
 }
 .end footer{
     font-family: var(--sans-serif);
-    color: var(--public-color);
+    color: white;
 }
 
 

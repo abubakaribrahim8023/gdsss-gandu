@@ -27,7 +27,17 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Staffs</a></li>
                         <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Tabs&nbsp;&nbsp;<i class="fa fa-angle-up"></i></a></li>
+                        <li>
+                            <a href="#" id="drop">Tabs&nbsp;&nbsp;<i class="fa fa-angle-up"></i></a>
+                            <div class="dropdown" id="dropdown">
+                                <div class="nav-link">
+                                    <a href="#"><i class="fa fa-cubes"></i> About Us</a>
+                                </div>
+                                <div class="nav-link">
+                                    <a href="#"><i class="fa fa-phone-alt"></i> Contact Us</a>
+                                </div>
+                            </div>
+                        </li>
                         <li><a href="#" id="login">Login</a></li>
                     </ul>
                 </div>
@@ -243,8 +253,8 @@
                             <i class="fa fa-angle-right"></i>
                         </div>
                         <div class="about-body">
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis magnam modi nulla ab optio ipsum totam itaque asperiores deleniti blanditiis,</p><br>
-                            <span>Lorem, ispansum dolor sit amet consectetur adispanisicing elit. spanersspaniciatis magnam modi nulla ab ospantio ispansum totam itaque asspaneriores deleniti blanditiis,</span>
+                            <span>adipisicing elit. Perspiciatis magnam modi nulla adipisicing elit. Perspiciatis magnam modi nullaadipisicing elit. Perspiciatis magnam modi nulla nulla adipisicing elit. Perspiciatis magnam modi nulla adipisicing elit. Perspiciatis magnam modi nulla</p><br>
+                            <span>Lorem, ispansum dolor sit amet consectetur adispanisicing elit. spanersspaniciatis magnam modi itaque asspaneriores deleniti blanditiis,</span>
                         </div>
                     </div>
                 </div>
@@ -278,6 +288,7 @@
                                     <i class="fa fa-tags"></i>
                                     <span>tabs</span>
                                 </a>
+                                
                             </li>
                         </div>
                     </div>
@@ -290,13 +301,31 @@
                         </div>
                         <div class="about-body">
                             <div class="contect-l">
-                                <i class="fa fa-map-marker-alt"></i>
+                                <i class="fa fa-map-marker-alt" style="padding: 6px 7px;"></i>
                                 <div class="text">
                                     <span>No BBU 3-5, Gombe Shopping Complex Gombe, Gombe State</span>
                                 </div>
                             </div>
                             <div class="contect-l">
-                                <i class="bx bxl-gmail"></i>
+                                <i class="fa fa-phone-alt" id="tt"></i>
+                                <div class="text">
+                                    <span>+2348067635590</span>
+                                </div>
+                            </div>
+                            <div class="contect-l">
+                                <i class="bx bxl-facebook" style="background: rgb(0, 102, 255);" ></i>
+                                <div class="text">
+                                    <span>Gdss Gandu Gombe</span>
+                                </div>
+                            </div>
+                            <div class="contect-l">
+                                <i class="bx bxl-twitter" id="tt"></i>
+                                <div class="text">
+                                    <span>@gdssgandugombe</span>
+                                </div>
+                            </div>
+                            <div class="contect-l">
+                                <i class="bx bxl-gmail" style="background: rgb(17, 99, 17);"></i>
                                 <div class="text">
                                     <span>gdssgandu2023@gmail.com</span>
                                 </div>
@@ -332,9 +361,9 @@
                 <footer>Copyright Reserved 2023 - Briatek Computers Nig. Ltd.</footer>
             </div>
         </section>
-
-
     </div>
     
+
+    <script type="text/javaScript" src="dropdown.js"></script>
 </body>
 </html>
