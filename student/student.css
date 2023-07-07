@@ -102,7 +102,10 @@
     margin: 0 30px 0 0;
     align-items: center;
 }
-
+.navbar .linkss{
+    position: relative;
+    display: none;
+}
 .navbar li a{
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -158,6 +161,45 @@
 }
 
 
+@media screen and (max-width: 1100px){
+    .header{
+        padding: 15px 0;
+    }
+    .header .st-head{
+        width: 90%;
+    }
+    .navbar li{
+        display: none;
+    }
+    .navbar .linkss{
+        position: relative;
+        display: block;
+        list-style: none;
+        margin: 0 30px 0 0;
+        margin-top: -20px;
+        align-items: center;
+    }
+    .navbar .linkss a{
+        color: white;
+        font-size: 20px;
+    }
+    .navbar{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .navbar li #login{
+        border: none;
+        padding: 0;
+    }
+    .name-or-logo{
+        margin-bottom: 20px;
+    }
+}
+
+
 
 /* home page for student  */
 
@@ -190,9 +232,28 @@
     font-size: 15px;
     margin-top: 10px;
 }
-.left i{
+.right{
+    flex-basis: 48%;
+    text-align: center;
+}
+.right i{
     font-size: 200px;
-    margin-top: -50px;
+}
+@media screen and (max-width: 900px){
+
+    .home{
+        width: 90%;
+    }
+    .left{
+        flex-basis: 100%;
+        /* margin-top: -30px; */
+    }
+    .right{
+        display: none;
+        flex-basis: 100%;
+    }
+    
+
 }
 
 
@@ -311,6 +372,24 @@
 #tt{
     background: rgb(19, 129, 192);
 }
+@media screen and (max-width: 500px){
+    .stf-body .st-col-4{
+        flex-basis: 100%;
+    }
+    .container{
+        width: 85%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* gallery section with image discription */
 
@@ -368,6 +447,23 @@
     font-family: purisa;
     font-size: 14px;
 }
+
+@media screen and (max-width: 500px){
+    .gallery .gall-img{
+        flex-basis: 100%;
+        margin-top: 25px;
+    }
+    .container{
+        width: 85%;
+    }
+}
+
+
+
+
+/* start footer here  */
+
+
 
 #footer{
     width: 100%;
@@ -483,3 +579,20 @@
 
 
 
+@media screen and (max-width: 500px){
+    .footer{
+        width: 90%;
+    }
+    .col-3{
+        flex-basis: 100%;
+        margin-top: 30px;
+    }
+    #linking{
+        display: none;
+    }
+    .end footer{
+        font-size: 13px;
+        font-weight: 900;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
