@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: aliceblue;
+    background: repeating-conic-gradient(
+        from 0deg,
+        rgba(236, 236, 236, 0.5) 63deg 89deg,
+        rgba(255, 255, 255, 0.8) 243deg 200deg,
+        rgba(236, 236, 236, 0.9) 0deg 120deg,
+        rgba(236, 236, 236, 0.9) 20deg 120deg
+    );
+    background-size: cover;
+}
+
+:root{
+    --bg-blue-pinks: rgb(53, 103, 211);
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    box-shadow: 0 2px 30px #efefef;
+    background: white;
+}
+.chat-head{
+    padding: 20px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    border-bottom: solid 1px #efefef;
+    
+}
+.name{
+    flex-basis: 70%;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    position: relative;
+}
+.name i{
+    font-size: 17px;
+}
+.name img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0 15px 0 15px;
+    z-index: 1;
+}
+.name::after{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: green;
+    border-radius: 50%;
+    z-index: 2;
+    left: 75px;
+    top: 30px;
+    border: solid 2px #fff;
+}
+.name .user h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    color: var(--bg-blue-pinks);
+}
+.name .user p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+.icon{
+    flex-basis: 30%;
+    text-align: right;
+    padding-right: 10px;
+}
+.icon i{
+    font-size: 20px;
+}
+
+.chat-body{
+    width: 100%;
+    padding: 20px;
+    background: white;
+    max-height: 740px;
+    overflow: scroll;
+}
+.chat-body::-webkit-scrollbar{
+    width: 0px;
+}
+
+.message{
+    width: 97%;
+    margin: auto;
+    display: block;
+}
+.message .left-msg{
+    width: 70%;
+    float: right;
+}
+.message .left-msg .msg{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    float: right;
+    justify-content: end;
+}
+.message .left-msg .msg img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.message .left-msg .msg .content{
+    padding: 15px 15px 6px 15px;
+    margin-right: 15px;
+    margin-top: -5px;
+    background: var(--bg-blue-pinks);
+    position: relative;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.message .left-msg .msg .content::before{
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 25px;
+    height: 20px;
+    right: -15px;
+    top: 0;
+    background: var(--bg-blue-pinks);
+    border-bottom-right-radius: 1050rem;
+    transform: rotate(-2deg);
+}
+.message .left-msg .msg .content h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: white;
+    text-shadow: -6 -6px 10px #222;
+}
+.message .left-msg .msg .content p i{
+    font-size: 14px;
+}
+.message .left-msg .msg .content p{
+    margin-top: 5px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+/* right messages */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.message .right-msg{
+    float: left;
+    width: 70%;
+    margin: 30px 0;
+}
+.message .right-msg .msg{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: start;
+}
+.message .right-msg .msg img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.message .right-msg .msg .content{
+    padding: 15px 15px 5px 15px;
+    margin-left: 15px;
+    margin-top: -5px;
+    /* box-shadow: 0px 4px 8px #ccc; */
+    background: #ddd;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.message .right-msg .msg .content::before{
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 25px;
+    height: 20px;
+    left: -15px;
+    top: -1px;
+    background: #ddd;
+    border-bottom-left-radius: 950px;
+    transform: rotate(2deg);
+}
+.message .right-msg .msg .content h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: #444;
+    text-shadow: -6 -6px 10px #222;
+}
+
+.message .right-msg .msg .content p{
+    margin-top: 5px;
+    font-size: 16px;
+    color: #444;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
