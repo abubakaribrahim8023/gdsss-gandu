@@ -24,23 +24,24 @@
                 </div>
                 <div class="links">
                     <ul class="navbar">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Staffs</a></li>
-                        <li><a href="#">Gallery</a></li>
+                        <div class="cancel"><i class="bx bx-x" onclick="closeMenu()"></i></div>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#staff">Staffs</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
                         <li>
                             <a href="#" id="drop" style="display: flex;">Tabs&nbsp;&nbsp;<i class="fa fa-angle-up"></i></a>
                             <div class="dropdown" id="dropdown">
                                 <div class="nav-link">
-                                    <a href="#"><i class="fa fa-cubes"></i> About Us</a>
+                                    <a href="#footer"><i class="fa fa-cubes"></i> About Us</a>
                                 </div>
                                 <div class="nav-link">
-                                    <a href="#"><i class="fa fa-phone-alt"></i> Contact Us</a>
+                                    <a href="#footer"><i class="fa fa-phone-alt"></i> Contact Us</a>
                                 </div>
                             </div>
                         </li>
                         <li><a href="#" id="login">Login</a></li>
-                        <div class="linkss"><a href="#" id="login"><i class="fa fa-bars"></i></a></div>
                     </ul>
+                    <div class="linkss" onclick="openMenu()"><a href="#" id="login"><i class="fa fa-bars"></i></a></div>
                 </div>
             </div>
         </div>

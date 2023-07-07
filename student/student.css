@@ -102,7 +102,7 @@
     margin: 0 30px 0 0;
     align-items: center;
 }
-.navbar .linkss{
+.linkss{
     position: relative;
     display: none;
 }
@@ -129,7 +129,7 @@
     position: fixed;
     top: 70px;
     padding: 12px 13px 12px 10px;
-    animation: fadeIn 0.6s both;
+    animation: fadeIn 0.3s both;
     display: none;
 }
 .dropdown .nav-link{
@@ -140,6 +140,7 @@
     padding: 8px 20px 8px 10px;
     color: #111;
     border-radius: 5px;
+    transition: 1s ease;
 }
 .dropdown .nav-link i{
     margin-right: 10px;
@@ -160,6 +161,10 @@
     }
 }
 
+.cancel{
+    display: none;
+    position: relative;
+}
 
 @media screen and (max-width: 1100px){
     .header{
@@ -168,34 +173,86 @@
     .header .st-head{
         width: 90%;
     }
-    .navbar li{
-        display: none;
-    }
-    .navbar .linkss{
+   
+    
+    .linkss{
         position: relative;
         display: block;
         list-style: none;
         margin: 0 30px 0 0;
-        margin-top: -20px;
         align-items: center;
     }
-    .navbar .linkss a{
+    .linkss a{
         color: white;
         font-size: 20px;
     }
     .navbar{
+        display: none;
         width: 100%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-self: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #ffffff;
+        min-height: 170px;
+        border-bottom: solid 4px var(--public-color);
+        animation: fadeIn 0.6s both;
+    }
+    .navbar li{
+        margin: 12px 10px;
+        color: black;
+    }
+    .navbar li a{
+        color: black;
+        display: block;
+
     }
     .navbar li #login{
         border: none;
         padding: 0;
     }
-    .name-or-logo{
-        margin-bottom: 20px;
+
+    .dropdown{
+        position: relative;
+        display: none;
+        margin-top: 0;
+        width: 100%;
+        top: 7px;
+        border-radius: 5px;
+    }
+    .dropdown .nav-link a{
+        color: #ccc;
+    }
+    .dropdown .nav-link a:hover{
+        color: black;
+    }
+
+    @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translatey(40px);
+        }
+        100% {
+          opacity: 1;
+        }
+    }
+    .cancel{
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 13px;
+    }
+    .cancel i{
+        font-size: 25px;
+        cursor: pointer;
+    }
+    @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translatey(40px);
+        }
+        100% {
+          opacity: 1;
+        }
     }
 }
 
@@ -246,7 +303,7 @@
     }
     .left{
         flex-basis: 100%;
-        /* margin-top: -30px; */
+        margin-top: -30px;
     }
     .right{
         display: none;
@@ -372,9 +429,20 @@
 #tt{
     background: rgb(19, 129, 192);
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 1300px){
+    .stf-body .st-col-4{
+        flex-basis: 48%;
+        min-height: 300px;
+    }
+    .container{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 550px){
     .stf-body .st-col-4{
         flex-basis: 100%;
+        min-height: 240px;
     }
     .container{
         width: 85%;
@@ -448,7 +516,17 @@
     font-size: 14px;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 1300px){
+    .gallery .gall-img{
+        flex-basis: 47%;
+        margin-top: 25px;
+    }
+    .container{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 550px){
     .gallery .gall-img{
         flex-basis: 100%;
         margin-top: 25px;
@@ -576,10 +654,27 @@
     font-family: var(--sans-serif);
     color: white;
 }
+@media screen and (max-width: 1300px){
+    .footer{
+        width: 90%;
+    }
+    .col-3{
+        flex-basis: 47%;
+        margin-top: 30px;
+    }
+    #linking{
+        display: block;
+    }
+    .end footer{
+        font-size: 13px;
+        font-weight: 900;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
 
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 670px){
     .footer{
         width: 90%;
     }
